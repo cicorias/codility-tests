@@ -1,7 +1,7 @@
 // you can write to stdout for debugging purposes, e.g.
 // System.out.println("this is a debug message");
-
-class Solution {
+package P001;
+public class Solution {
     public int solution(int N) {
         // write your code in Java SE 8
         int count = 0;

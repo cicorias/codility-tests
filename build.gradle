@@ -1,0 +1,33 @@
+plugins {
+	id 'java'
+	id 'eclipse' // optional (to generate Eclipse project files)
+	id 'idea' // optional (to generate IntelliJ IDEA project files)
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation(platform('org.junit:junit-bom:5.8.2'))
+	implementation('org.junit.jupiter:junit-jupiter')
+}
+
+// sourceSets {
+// 	main{
+// 		java{
+// 			srcDir 'src'
+// 		}
+// 	}
+
+// 	// test {
+// 	// 	resources { srcDir ''}
+// 	// }
+// }
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+	}
+}
